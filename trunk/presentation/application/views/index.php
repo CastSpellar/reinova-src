@@ -80,6 +80,32 @@
 		    });
 		    
 		</script>
+                <script type="text/javascript">
+                    
+                    function loadPages(pageName){
+                         jQuery(function($){
+                            $.ajax({
+                            url: pageName,
+                            dataType: "html",
+                            success: function(html) {
+                                $("#mainContentRightDiv").empty() ;
+                                $("#mainContentRightDiv").append(html);
+                            }
+                        })});
+                    }
+                    
+                    /*function loadEnterprise() {
+                        jQuery(function($){
+                            $.ajax({
+                            url: 'enterprise',
+                            dataType: "html",
+                            success: function(html) {
+                                $("#mainContentRightDiv").empty() ;
+                                $("#mainContentRightDiv").append(html);
+                            }
+                        })});
+                    }*/
+                </script>
 		
 	</head>
 	
@@ -87,18 +113,58 @@
 		ul#demo-block{ margin:0 15px 15px 15px; }
 			ul#demo-block li{ margin:0 0 10px 0; padding:10px; display:inline; float:left; clear:both; color:#aaa; background:url('img/bg-black.png'); font:11px Helvetica, Arial, sans-serif; }
 			ul#demo-block li a{ color:#eee; font-weight:bold; }
+                        
+                 body{
+                            
+                        }
+                    
+                #mainContentDiv{
+                width: 800px; height: 500px; position:relative; margin-left: auto;
+                margin-right: auto; background:url('img/bg-black.png'); top: 100px;
+            }
+            
+            #mainContentLeftDiv{
+                width: 200px; height: 450px; position:relative; float: left; border: #AAAAAA thin solid;
+                margin-left: 25px; margin-top: 25px;
+            }
+            #mainContentRightDiv{
+                width: 525px; height: 450px; position:relative; border: #AAAAAA thin solid;
+                display: inline-block; margin-left: 25px; margin-top: 25px;
+            }
+            .navMenu {
+                padding-left: 10px;
+                text-decoration: none;
+                color: #ffffff;
+                list-style-type: none;
+            }
+            #mainContentLeftDiv ul{
+                list-style-type: none;
+            }
+            
 	</style>
+        
+        
 
 <body>
 
-	<!--Demo styles (you can delete this block)-->
-	
-	<ul id="demo-block">
-		<li><a href="http://buildinternet.com/project/supersized/" target="_blank"><img src="img/supersized-logo.png"/></a></li>
-		<li>Photographers: <a href="http://cargocollective.com/mariakazvan" target="_blank">Maria Kazvan</a>, <a href="http://colindub.com" target="_blank">Colin Wojno</a>, &amp; <a href="http://brookeshaden.com/" target="_blank">Brooke Shaden</a></li>
-	</ul>
-	
-	<!--End of styles-->
+    <div id="mainContentDiv">
+        
+        <div id="mainContentLeftDiv">
+            <ul>
+                <li><a href="#" onClick="loadPages('concept')" class="navMenu">Conceito</a></li>
+                <li><a href="#" onClick="loadPages('enterprise')" class="navMenu">Empresa</a></li>
+                <li><a href="#" onClick="loadPages('services')" class="navMenu">Serviços</a></li>
+                <li><a href="#" onClick="loadPages('partners')" class="navMenu">Parceiros</a></li>
+                <li><a href="#" onClick="loadPages('contacts')" class="navMenu">Contactos</a></li>
+            </ul>
+        </div>
+        
+        <div id="mainContentRightDiv">
+            
+        </div>
+        
+    </div>
+
 
 	
 </body>

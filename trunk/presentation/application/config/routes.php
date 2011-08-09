@@ -39,6 +39,11 @@
 */
 
 $route['default_controller'] = "main";
+$route['enterprise'] = "enterpriseController";
+$route['concept'] = "conceptController";
+$route['services'] = "servicesController";
+$route['contacts'] = "contactsController";
+$route['partners'] = "partnersController";
 $route['404_override'] = '';
 
 

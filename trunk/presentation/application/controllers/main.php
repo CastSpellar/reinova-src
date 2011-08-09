@@ -19,8 +19,7 @@ class Main extends CI_Controller {
 	 */
 	public function index()
 	{
-            phpinfo();
-		//$this->load->view('index');
+		$this->load->view('index');
 	}
 }
 
