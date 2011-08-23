@@ -38,8 +38,8 @@
 					start_slide             :   1,			// Start slide (0 is random)
 					stop_loop				:	0,			// Pauses slideshow on last slide
 					random					: 	0,			// Randomize slide order (Ignores start slide)
-					slide_interval          :   3000,		// Length between transitions
-					transition              :   6, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+					slide_interval          :   8000,		// Length between transitions
+					transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
 					transition_speed		:	1000,		// Speed of transition
 					new_window				:	1,			// Image links open in new window/tab
 					pause_hover             :   0,			// Pause slideshow on hover
@@ -58,18 +58,16 @@
 															   
 					// Components							
 					slide_links				:	'blank',	// Individual links for each slide (Options: false, 'number', 'name', 'blank')
-					thumb_links				:	1,			// Individual thumb links for each slide
+					thumb_links				:	0,			// Individual thumb links for each slide
 					thumbnail_navigation    :   0,			// Thumbnail navigation
 					slides 					:  	[			// Slideshow Images
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/kazvan-1.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-1.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/kazvan-2.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-2.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},  
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/kazvan-3.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-3.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/wojno-1.jpg', title : 'Image Credit: Colin Wojno', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/wojno-1.jpg', url : 'http://www.nonsensesociety.com/2011/03/colin/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/wojno-2.jpg', title : 'Image Credit: Colin Wojno', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/wojno-2.jpg', url : 'http://www.nonsensesociety.com/2011/03/colin/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/wojno-3.jpg', title : 'Image Credit: Colin Wojno', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/wojno-3.jpg', url : 'http://www.nonsensesociety.com/2011/03/colin/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/shaden-1.jpg', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-1.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/shaden-2.jpg', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-2.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/shaden-3.jpg', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-3.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'}
+														{image : 'images/supersized1.jpg'},
+														{image : 'images/supersized2.jpg'},  
+														{image : 'images/supersized3.jpg'},
+														{image : 'images/supersized4.png'},
+														{image : 'images/supersized5.jpg'},
+														{image : 'images/supersized6.jpg'},
+														{image : 'images/supersized7.jpg'}
 												],
 												
 					// Theme Options			   
@@ -80,16 +78,20 @@
 		    });
 		    
 		</script>
+                
                 <script type="text/javascript">
                     
                     function loadPages(pageName){
+                        $("#mainContentRightDiv").fadeOut();
+                        $("#mainContentRightDiv").empty() ;
                          jQuery(function($){
                             $.ajax({
                             url: pageName,
                             dataType: "html",
                             success: function(html) {
-                                $("#mainContentRightDiv").empty() ;
                                 $("#mainContentRightDiv").append(html);
+                                $("#mainContentRightDiv").fadeIn();
+                                
                             }
                         })});
                     }
@@ -119,17 +121,21 @@
                         }
                     
                 #mainContentDiv{
-                width: 800px; height: 500px; position:relative; margin-left: auto;
-                margin-right: auto; background:url('img/bg-black.png'); top: 100px;
+                width: 800px; height: 600px; position:relative; margin-left: auto;
+                margin-right: auto; background:url('img/bg-black.png'); top: 20px;
             }
             
             #mainContentLeftDiv{
-                width: 200px; height: 450px; position:relative; float: left; border: #AAAAAA thin solid;
+                width: 200px; height: 450px; position:relative; float: left; 
                 margin-left: 25px; margin-top: 25px;
             }
             #mainContentRightDiv{
-                width: 525px; height: 450px; position:relative; border: #AAAAAA thin solid;
+                width: 525px; height: 450px; position:relative;
                 display: inline-block; margin-left: 25px; margin-top: 25px;
+            }
+            
+            #mainContentRightDiv a{
+                color: white;
             }
             .navMenu {
                 padding-left: 10px;
@@ -141,6 +147,11 @@
                 list-style-type: none;
             }
             
+            .content p{
+                padding-bottom: 10px;
+                text-align: justify;
+            }
+            
 	</style>
         
         
@@ -150,11 +161,13 @@
     <div id="mainContentDiv">
         
         <div id="mainContentLeftDiv">
+            <img src="images/logo_small.png" alt="" />
             <ul>
                 <li><a href="#" onClick="loadPages('concept')" class="navMenu">Conceito</a></li>
                 <li><a href="#" onClick="loadPages('enterprise')" class="navMenu">Empresa</a></li>
                 <li><a href="#" onClick="loadPages('services')" class="navMenu">Serviços</a></li>
                 <li><a href="#" onClick="loadPages('partners')" class="navMenu">Parceiros</a></li>
+                <li><a href="#" onClick="loadPages('portal')" class="navMenu">Portal</a></li>
                 <li><a href="#" onClick="loadPages('contacts')" class="navMenu">Contactos</a></li>
             </ul>
         </div>
