@@ -44,6 +44,7 @@ $route['concept'] = "conceptController";
 $route['services'] = "servicesController";
 $route['contacts'] = "contactsController";
 $route['partners'] = "partnersController";
+$route['portal'] = "portalController";
 $route['404_override'] = '';
 
 
