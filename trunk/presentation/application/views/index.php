@@ -14,7 +14,7 @@
 
 	<head>
 
-		<title>Supersized - Full Screen Background Slideshow jQuery Plugin</title>
+		<title>Re.Inova - Environmental Knowledge</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		
 		<link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
@@ -130,8 +130,15 @@
                 margin-left: 25px; margin-top: 25px;
             }
             #mainContentRightDiv{
-                width: 525px; height: 450px; position:relative;
-                display: inline-block; margin-left: 25px; margin-top: 25px;
+                width: 525px; 
+                height: 450px; 
+                position:relative;
+                display: inline-block; 
+                margin-left: 25px; 
+                margin-top: 25px;
+                font-family: Trebuchet MS, Helvetica, sans-serif;
+                font-size: 12px;
+                color: #ffffff;
             }
             
             #mainContentRightDiv a{
@@ -145,6 +152,11 @@
             }
             #mainContentLeftDiv ul{
                 list-style-type: none;
+                margin-top: 30px;
+                margin-right: 40px;
+                text-align: center;
+                font-family: Trebuchet MS, Helvetica, sans-serif;
+                font-size: 20px;
             }
             
             .content p{
