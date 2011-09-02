@@ -143,7 +143,9 @@
         }
 
         #mainContentDiv{
-            position:relative; top:50%; margin-top:-300px;
+            position:relative; 
+            top:50%; 
+            margin-top:-300px;
             height: 600px;
             background:url('img/bg-black.png'); /*top: 20px;*/
             border:none 5px #000000;
@@ -197,6 +199,14 @@
         .content p{
             padding-bottom: 10px;
             text-align: justify;
+        }
+        
+        #map_canvas { 
+            positio: relative;
+            border: #ffffff solid thin;
+            height: 300px; 
+            width: 400px;
+            z-index: 100; 
         }
 
     </style>
