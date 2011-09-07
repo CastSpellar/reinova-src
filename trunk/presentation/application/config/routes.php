@@ -45,6 +45,7 @@ $route['services'] = "servicesController";
 $route['contacts'] = "contactsController";
 $route['partners'] = "partnersController";
 $route['portal'] = "portalController";
+$route['flash'] = "flashController";
 $route['404_override'] = '';
 
 

@@ -26,6 +26,11 @@
 
         <script type="text/javascript" src="js/supersized.3.2.4.min.js"></script>
         <script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
+        
+        <script type="text/javascript" src="js/swfobject.js"></script>
+		<script type="text/javascript">
+			swfobject.registerObject("myFlashContent", "9.0.45");
+		</script>
 
         <script type="text/javascript">
 			
@@ -226,6 +231,7 @@
                     <li><a href="#" onClick="loadPages('partners')" class="navMenu">Parceiros</a></li>
                     <li><a href="#" onClick="loadPages('portal')" class="navMenu">Portal</a></li>
                     <li><a href="#" onClick="loadPages('contacts')" class="navMenu">Contactos</a></li>
+                    <li><a href="#" onClick="loadPages('flash')" class="navMenu">Flash</a></li>
                 </ul>
             </div>
 
