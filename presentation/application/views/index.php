@@ -143,9 +143,13 @@
         ul#demo-block li{ margin:0 0 10px 0; padding:10px; display:inline; float:left; clear:both; color:#aaa; background:url('img/bg-black.png'); font:11px Helvetica, Arial, sans-serif; }
         ul#demo-block li a{ color:#eee; font-weight:bold; }
 
-        body{
-
-        }
+        body {  scrollbar-face-color: #FFFFFF;
+                scrollbar-highlight-color: #8dc63f;
+                scrollbar-3dlight-color: #8dc63f;
+                scrollbar-darkshadow-color: #999999;
+                scrollbar-shadow-color: #CCCCFF;
+                scrollbar-arrow-color: #FFFFFF;
+                scrollbar-track-color: #8dc63f;}
 
         #mainContentDiv{
             position:relative; 
@@ -169,7 +173,7 @@
         }
         #mainContentRightDiv{
             width: 525px; 
-            height: 450px; 
+            height: 550px; 
             position:relative;
             display: inline-block; 
             margin-left: 25px; 
@@ -177,6 +181,7 @@
             font-family: Trebuchet MS, Helvetica, sans-serif;
             font-size: 12px;
             color: #ffffff;
+            overflow: auto;
         }
 
         #mainContentRightDiv a{
@@ -201,6 +206,7 @@
         h1{
             font-family: 'Michroma', sans-serif;
         }
+    
         .content p{
             padding-bottom: 10px;
             text-align: justify;
