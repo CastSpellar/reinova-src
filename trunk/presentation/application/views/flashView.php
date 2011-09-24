@@ -15,5 +15,5 @@
     </object>-->
 </div>
 <script>
-    swfobject.embedSWF("swf/intro.swf", "flash", "800", "600", "9.0.0");
+    
 </script>
