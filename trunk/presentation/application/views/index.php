@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="theme/supersized.shutter.css" type="text/css" media="screen" />
         <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/reinova_styles.css" type="text/css" media="screen" />
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/jquery.easing.min.js"></script>
@@ -44,7 +45,7 @@
                     start_slide             :   1,			// Start slide (0 is random)
                     stop_loop				:	0,			// Pauses slideshow on last slide
                     random					: 	0,			// Randomize slide order (Ignores start slide)
-                    slide_interval          :   8000,		// Length between transitions
+                    slide_interval          :   15000,		// Length between transitions
                     transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
                     transition_speed		:	1000,		// Speed of transition
                     new_window				:	1,			// Image links open in new window/tab
@@ -76,7 +77,6 @@
                         {image : 'images/supersized7.jpg'}*/
                         {image : 'images/tree.jpg'},
                         {image : 'images/spring.jpg'},
-                        {image : 'images/summer.jpg'},
                         {image : 'images/autmn.jpg'},
                         {image : 'images/winter.jpg'}
                     ],
@@ -122,105 +122,11 @@
                 })});
                 
             }
-                    
-            /*function loadEnterprise() {
-                jQuery(function($){
-                    $.ajax({
-                    url: 'enterprise',
-                    dataType: "html",
-                    success: function(html) {
-                        $("#mainContentRightDiv").empty() ;
-                        $("#mainContentRightDiv").append(html);
-                    }
-                })});
-            }*/
+
         </script>
 
     </head>
 
-    <style type="text/css">
-        ul#demo-block{ margin:0 15px 15px 15px; }
-        ul#demo-block li{ margin:0 0 10px 0; padding:10px; display:inline; float:left; clear:both; color:#aaa; background:url('img/bg-black.png'); font:11px Helvetica, Arial, sans-serif; }
-        ul#demo-block li a{ color:#eee; font-weight:bold; }
-
-        body {  scrollbar-face-color: #FFFFFF;
-                scrollbar-highlight-color: #8dc63f;
-                scrollbar-3dlight-color: #8dc63f;
-                scrollbar-darkshadow-color: #999999;
-                scrollbar-shadow-color: #CCCCFF;
-                scrollbar-arrow-color: #FFFFFF;
-                scrollbar-track-color: #8dc63f;}
-
-        #mainContentDiv{
-            position:relative; 
-            top:50%; 
-            margin-top:-300px;
-            height: 600px;
-            background:url('img/bg-black.png'); /*top: 20px;*/
-            border:none 5px #000000;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            margin-left: auto;
-            width: 800px;
-            margin-right: auto;
-        }
-
-        #mainContentLeftDiv{
-            width: 200px; height: 450px; position:relative; float: left; 
-            margin-left: 25px; margin-top: 25px;
-            font-family: 'Michroma', sans-serif;
-        }
-        #mainContentRightDiv{
-            width: 525px; 
-            height: 550px; 
-            position:relative;
-            display: inline-block; 
-            margin-left: 25px; 
-            margin-top: 25px;
-            font-family: Trebuchet MS, Helvetica, sans-serif;
-            font-size: 12px;
-            color: #ffffff;
-            overflow: auto;
-        }
-
-        #mainContentRightDiv a{
-            color: white;
-        }
-        .navMenu {
-            padding-left: 10px;
-            text-decoration: none;
-            color: #ffffff;
-            list-style-type: none;
-        }
-        #mainContentLeftDiv ul{
-            list-style-type: none;
-            margin-top: 30px;
-            margin-right: 40px;
-            text-align: center;
-            /*font-family: Trebuchet MS, Helvetica, sans-serif;*/
-            font-size: 20px;
-            font-family: 'Michroma', sans-serif;
-        }
-
-        h1{
-            font-family: 'Michroma', sans-serif;
-        }
-    
-        .content p{
-            padding-bottom: 10px;
-            text-align: justify;
-        }
-        
-        #map_canvas { 
-            positio: relative;
-            border: #ffffff solid thin;
-            height: 300px; 
-            width: 400px;
-            z-index: 100; 
-        }
-
-    </style>
 
 
 

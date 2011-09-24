@@ -1,0 +1,98 @@
+ul#demo-block{ margin:0 15px 15px 15px; }
+ul#demo-block li{ margin:0 0 10px 0; padding:10px; display:inline; float:left; clear:both; color:#aaa; background:url('img/bg-black.png'); font:11px Helvetica, Arial, sans-serif; }
+ul#demo-block li a{ color:#eee; font-weight:bold; }
+
+body {  scrollbar-face-color: #FFFFFF;
+        scrollbar-highlight-color: #8dc63f;
+        scrollbar-3dlight-color: #8dc63f;
+        scrollbar-darkshadow-color: #999999;
+        scrollbar-shadow-color: #CCCCFF;
+        scrollbar-arrow-color: #FFFFFF;
+        scrollbar-track-color: #8dc63f;}
+
+#mainContentDiv{
+    position:relative; 
+    top:50%; 
+    margin-top:-300px;
+    height: 600px;
+    background: url('../img/bg-black.png');
+    border:none 5px #000000;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-left: auto;
+    width: 800px;
+    margin-right: auto;
+}
+
+#mainContentLeftDiv{
+    width: 200px; height: 450px; position:relative; float: left; 
+    margin-left: 25px; margin-top: 25px;
+    font-family: 'Michroma', sans-serif;
+}
+#mainContentRightDiv{
+    width: 525px; 
+    height: 550px; 
+    position:relative;
+    display: inline-block; 
+    margin-left: 25px; 
+    margin-top: 25px;
+    font-family: Trebuchet MS, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+#mainContentRightDivTop{
+    width: 525px;
+    height: 350px;
+    position:relative;
+    display: inline-block; 
+    overflow-y: scroll;
+}
+
+#mainContentRightDiv a{
+    color: white;
+}
+.navMenu {
+    padding-left: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    list-style-type: none;
+}
+#mainContentLeftDiv ul{
+    list-style-type: none;
+    margin-top: 30px;
+    margin-right: 40px;
+    text-align: center;
+    /*font-family: Trebuchet MS, Helvetica, sans-serif;*/
+    font-size: 20px;
+    font-family: 'Michroma', sans-serif;
+}
+
+h1{
+    font-family: 'Michroma', sans-serif;
+}
+
+.content{
+    
+    padding-right: 20px;
+}
+
+.content p{
+    padding-bottom: 10px;
+    text-align: justify;
+}
+
+.content img{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+
+#map_canvas { 
+    position: relative;
+    border: #ffffff solid thin;
+    height: 300px; 
+    width: 400px;
+    z-index: 100; 
+}
