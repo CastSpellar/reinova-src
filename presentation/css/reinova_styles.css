@@ -45,13 +45,11 @@ body {  scrollbar-face-color: #FFFFFF;
 
 #mainContentRightDiv .viewport { width: 500px; height: 550px; overflow: hidden; position: relative; }
 #mainContentRightDiv .overview { list-style: none; position: absolute; left: 0; top: 0; }
-#mainContentRightDiv .thumb .end,
-#mainContentRightDiv .thumb { background-color: #003D5D; }
-#mainContentRightDiv .scrollbar { position: relative; float: right; width: 15px; }
-#mainContentRightDiv .track { background-color: #D8EEFD; height: 100%; width:13px; position: relative; padding: 0 1px; }
-#mainContentRightDiv .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
-#mainContentRightDiv .thumb .end { overflow: hidden; height: 5px; width: 13px; }
-#mainContentRightDiv .disable{ display: none; }
+#mainContentRightDiv .scrollbar{ background: transparent url(../img/bg-scrollbar-track-y.png) no-repeat 0 0; position: relative; background-position: 0 0; float: right; width: 15px; }
+#mainContentRightDiv .track { background: transparent url(../img/bg-scrollbar-trackend-y.png) no-repeat 0 100%; height: 100%; width:15px; position: relative; }
+#mainContentRightDiv .thumb { background: transparent url(../img/bg-scrollbar-thumb-y.png) no-repeat 50% 100%; height: 20px; width: 25px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left: -5px; }
+#mainContentRightDiv .thumb .end { background: transparent url(../img/bg-scrollbar-thumb-y.png) no-repeat 50% 0; overflow: hidden; height: 5px; width: 25px; }
+#mainContentRightDiv .disable { display: none; }
 
 #mainContentRightDivTop{
     width: 525px;
