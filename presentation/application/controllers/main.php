@@ -21,6 +21,10 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('index');
 	}
+        
+        public function base(){
+            $this->load->view('mainView');
+        }
 }
 
 /* End of file welcome.php */
