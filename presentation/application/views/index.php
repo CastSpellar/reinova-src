@@ -12,7 +12,7 @@
         <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
             <link rel="stylesheet" href="css/reinova_styles.css" type="text/css" media="screen" />
 
-            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+            <script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
             <script type="text/javascript" src="js/jquery.easing.min.js"></script>
 
             <script type="text/javascript" src="js/supersized.3.2.4.min.js"></script>
