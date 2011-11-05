@@ -97,7 +97,13 @@
                                 
                             }
                         })});
-                }                
+                }         
+                function show(showbasic){
+                    basic = showbasic;
+                    if(basic){
+                        loadPages('main/base');
+                    }
+                }
             </script>
 
     </head>
@@ -110,7 +116,7 @@
         </div>
         
         <div>
-            <a onclick="" >versao basica</a>
+            <a onclick="show(true);" style="cursor: pointer;">versao basica</a>
         </div>
 
 
