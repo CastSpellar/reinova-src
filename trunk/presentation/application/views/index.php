@@ -9,7 +9,7 @@
 
         <link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="theme/supersized.shutter.css" type="text/css" media="screen" />
-        <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'/>
             <link rel="stylesheet" href="css/reinova_styles.css" type="text/css" media="screen" />
 
             <script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
@@ -42,7 +42,7 @@
                         performance				:	1,			// 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
                         image_protect			:	1,			// Disables image dragging and right click with Javascript
 															   
-                        // Size & Position						   
+                        // Size and Position						   
                         min_width		        :   0,			// Min width allowed (in pixels)
                         min_height		        :   0,			// Min height allowed (in pixels)
                         vertical_center         :   1,			// Vertically center background
@@ -83,25 +83,59 @@
                             url: pageName,
                             dataType: "html",
                             success: function(html) {
-                                $("#mainContentRightDiv").fadeOut("slow",function(){
-                                    $("#mainContentRightDiv").html(html);
-                                    $("#mainContentRightDiv").prepend('<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>');
-                                    $("#mainContentRightDiv").fadeIn("slow",function(){
-                                        if($("#mainContentRightDiv").length > 0){
-                                            $("#mainContentRightDiv").tinyscrollbar();
-                                        } else console.log("WTF");
-                                    });                                    
-                                }) ;
-                                //$("#mainContentRightDiv").empty() ;
-                        
-                                
+                                if(basic){
+                                    $("#mainContentRightDiv").fadeOut("slow",function(){
+                                        $("#mainContentRightDiv").html(html);
+                                        $("#mainContentRightDiv").fadeIn("slow",function(){
+                                            if($("#mainContentRightDiv").length > 0){
+                                                //$("#mainContentRightDiv").prepend('<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>');
+                                                //$("#mainContentRightDiv").tinyscrollbar();
+                                            } else console.log("WTF");
+                                            
+                                        });                                    
+                                    }) ;
+                                }
                             }
                         })});
-                }         
-                function show(showbasic){
-                    basic = showbasic;
+                }        
+                
+                function loadFlash(){                
+                            $("#mainContentLeftDiv").hide();
+                            $("#mainContentRightDiv").hide();
+                    var flashvars = {};
+                    var params = {};
+                    params.play = "false";
+                    params.loop = "true";
+                    params.menu = "false";
+                    params.quality = "best";
+                    params.wmode = "transparent";
+                    params.devicefont = "true";
+                    params.allowfullscreen = "true";
+                    params.allowscriptaccess = "always";
+                    params.allownetworking = "all";
+                    var attributes = {};
+                    attributes.align = "middle";
+                    swfobject.embedSWF("swf/intro.swf", "base", "800px", "600px", "9.0.0", false, flashvars, params, attributes); 
+                }
+                
+                function show(){
+                    basic = !basic;
                     if(basic){
-                        loadPages('main/base');
+                        swfobject.removeSWF("base");
+                        $("#mainContentDiv").fadeOut("slow") ;
+                        $("#mainContentDiv").fadeIn("slow", function(){                                        
+                            $("#mainContentLeftDiv").show();
+                            $("#mainContentRightDiv").show();                                                
+                            loadPages('concept');  
+                        });
+                        $("#version").text("Versão Flash");
+                        
+                    } else {
+                        $("#mainContentDiv").fadeOut("slow") ;
+                        $("#mainContentDiv").prepend('<div id="base"></div>');
+                        loadFlash();
+                        $("#mainContentDiv").fadeIn("slow");
+                        $("#version").text("Versão básica");
                     }
                 }
             </script>
@@ -109,34 +143,19 @@
     </head>
     <body>
         <div id="mainContentDiv">
-
-            <div id="base">
-                <?php $this->load->view('mainView'); ?>
-            </div>
+            <div id="base">&nbsp;</div>
+            <?php $this->load->view('mainView'); ?>
         </div>
         
-        <div>
-            <a onclick="show(true);" style="cursor: pointer;">versao basica</a>
+        <div style="height: 15px;">
+            <a id="version" onclick="show(true)" style="cursor: pointer;">versao basica</a>
         </div>
 
 
-        <script>
+        <script language="javascript">
         
             if(swfobject.hasFlashPlayerVersion("9.0.0") && !basic){
-                var flashvars = {};
-                var params = {};
-                params.play = "false";
-                params.loop = "true";
-                params.menu = "false";
-                params.quality = "best";
-                params.wmode = "transparent";
-                params.devicefont = "true";
-                params.allowfullscreen = "true";
-                params.allowscriptaccess = "always";
-                params.allownetworking = "all";
-                var attributes = {};
-                attributes.align = "middle";
-                swfobject.embedSWF("swf/intro.swf", "base", "800px", "600px", "9.0.0", false, flashvars, params, attributes); 
+                loadFlash();                
             }    
         </script>
     </body>
