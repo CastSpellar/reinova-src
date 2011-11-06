@@ -128,14 +128,14 @@
                             $("#mainContentRightDiv").show();                                                
                             loadPages('concept');  
                         });
-                        $("#version").text("Vers√£o Flash");
+                        $("#version").text("Vers„o Flash");
                         
                     } else {
                         $("#mainContentDiv").fadeOut("slow") ;
                         $("#mainContentDiv").prepend('<div id="base"></div>');
                         loadFlash();
                         $("#mainContentDiv").fadeIn("slow");
-                        $("#version").text("Vers√£o b√°sica");
+                        $("#version").text("Vers„o b·sica");
                     }
                 }
             </script>
