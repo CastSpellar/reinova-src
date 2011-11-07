@@ -45,15 +45,13 @@
 </script>
 </head>
 <body onload="initialize()">
-    <div id="mainContentRightDiv" class="viewport">
+    <div id="contactsContent" class="content overview">
         <h1 style="color: #FFF">Contactos</h1> &nbsp;&nbsp;&nbsp;
         <h3>Re.INOVa - Environmental Knowledge</h3>
         <p>TagusValley - Rua José Dias Simão, Alferrarede, 2200-062 Abrantes</p>
         <p>Email: re.inovaenvironmental@gmail.com</p>
         <br/>   
-        <div id="map_canvas">
-            <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.pt/maps/ms?hl=pt-PT&amp;mpa=0&amp;ctz=0&amp;mpf=0&amp;ie=UTF8&amp;msa=0&amp;msid=209721204100509862368.0004b105118e5cd0787f3&amp;t=h&amp;vpsrc=6&amp;ll=39.475144,-8.188119&amp;spn=0.002899,0.00456&amp;z=17&amp;output=embed"></iframe><br /><small>Ver <a href="http://maps.google.pt/maps/ms?hl=pt-PT&amp;mpa=0&amp;ctz=0&amp;mpf=0&amp;ie=UTF8&amp;msa=0&amp;msid=209721204100509862368.0004b105118e5cd0787f3&amp;t=h&amp;vpsrc=6&amp;ll=39.475144,-8.188119&amp;spn=0.002899,0.00456&amp;z=17&amp;source=embed" style="color:#0000FF;text-align:left">Re.INOVa Environmental Knowledge</a> 
-        </div>
+        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.pt/maps/ms?hl=pt-PT&amp;mpa=0&amp;ctz=0&amp;mpf=0&amp;ie=UTF8&amp;msa=0&amp;msid=209721204100509862368.0004b105118e5cd0787f3&amp;t=h&amp;vpsrc=6&amp;ll=39.475144,-8.188119&amp;spn=0.002899,0.00456&amp;z=17&amp;output=embed"></iframe><br /><small>Ver <a href="http://maps.google.pt/maps/ms?hl=pt-PT&amp;mpa=0&amp;ctz=0&amp;mpf=0&amp;ie=UTF8&amp;msa=0&amp;msid=209721204100509862368.0004b105118e5cd0787f3&amp;t=h&amp;vpsrc=6&amp;ll=39.475144,-8.188119&amp;spn=0.002899,0.00456&amp;z=17&amp;source=embed" style="color:#0000FF;text-align:left">Re.INOVa Environmental Knowledge</a> 
     </div>
 </body>
 </html>

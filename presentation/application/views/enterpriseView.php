@@ -1,4 +1,3 @@
-
 <div id="mainContentRightDivTop" class="viewport">
     <div class="content overview" id="enterpriseContent">
         <h1 style="color: #FFF">Empresa</h1> &nbsp;&nbsp;&nbsp;
