@@ -1,3 +1,10 @@
+@font-face {
+    font-family: NeogreyRegular;
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/NeogreyRegular.otf") format("opentype");
+}
+
 ul#demo-block{ margin:0 15px 15px 15px; }
 ul#demo-block li{ margin:0 0 10px 0; padding:10px; display:inline; float:left; clear:both; color:#aaa; background:url('img/bg-black.png'); font:11px Helvetica, Arial, sans-serif; }
 ul#demo-block li a{ color:#eee; font-weight:bold; }
@@ -9,6 +16,50 @@ body {  scrollbar-face-color: #FFFFFF;
         scrollbar-shadow-color: #CCCCFF;
         scrollbar-arrow-color: #FFFFFF;
         scrollbar-track-color: #8dc63f;}
+
+#flashLinkDiv {
+    position:absolute;
+    width: 200px;
+    height: 30px;
+    background: url('../img/bg-black.png');
+    border:none 5px #000000;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+    bottom: 28px;
+    left: 40px;
+}
+
+#flashLinkDiv a {
+    display: block;
+    margin-top: 5px;
+    font-family: "Michroma";
+    font-size: 13px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+#soundDiv {
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    background: url('../img/bg-black.png');
+    border:none 5px #000000;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+    top: 28px;
+    right: 40px;
+    
+}
+
+#soundDiv a {
+    margin-top: 3px;
+    margin-right: 3px;
+    float: right;
+}
 
 #mainContentDiv{
     position:relative; 
@@ -37,7 +88,7 @@ body {  scrollbar-face-color: #FFFFFF;
     display: inline-block; 
     margin-left: 25px; 
     margin-top: 25px;
-    font-family: Trebuchet MS, Helvetica, sans-serif;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 13px;
     color: #ffffff;
     clear: both; 
@@ -50,6 +101,7 @@ body {  scrollbar-face-color: #FFFFFF;
 #mainContentRightDiv .thumb { background: transparent url(../img/bg-scrollbar-thumb-y.png) no-repeat 50% 100%; height: 20px; width: 25px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left: -5px; }
 #mainContentRightDiv .thumb .end { background: transparent url(../img/bg-scrollbar-thumb-y.png) no-repeat 50% 0; overflow: hidden; height: 5px; width: 25px; }
 #mainContentRightDiv .disable { display: none; }
+#mainContentRightDiv  h3 {font-family: "NeogreyRegular", 'Michroma' ; font-size: 14px; }
 
 #mainContentRightDivTop{
     width: 525px;
