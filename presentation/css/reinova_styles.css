@@ -126,11 +126,11 @@ body {  scrollbar-face-color: #FFFFFF;
     text-align: center;
     /*font-family: Trebuchet MS, Helvetica, sans-serif;*/
     font-size: 20px;
-    font-family: 'Michroma', sans-serif;
+    font-family: 'NeogreyRegular', 'Michroma', sans-serif;
 }
 
 h1{
-    font-family: 'Michroma', sans-serif;
+    font-family: 'NeogreyRegular', 'Michroma', sans-serif;
 }
 
 .content{

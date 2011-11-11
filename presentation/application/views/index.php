@@ -45,7 +45,7 @@
             
             // Play -> Começa a reprodução do mp3 e muda o icon de som
             function play() {
-                $("#jpId").jPlayer("play");
+                $("#jpId").jPlayer("unmute");
                 $("#playPause").fadeOut("slow", function() {
                     $("#playPause").html('<a href="javascript:pause();"><img src="img/unmute.png" /></a>');
                     $("#playPause").fadeIn("slow");
@@ -54,7 +54,7 @@
             
             // Pause -> Para a reprodução do mp3 e muda o icon de som
             function pause() {
-                $("#jpId").jPlayer("pause", 0);
+                $("#jpId").jPlayer("mute");
                 $("#playPause").fadeOut("slow", function() {
                     $("#playPause").html('<a href="javascript:play();"><img src="img/mute.png" /></a>');
                     $("#playPause").fadeIn("slow");
