@@ -18,6 +18,7 @@
         <script type="text/javascript" src="js/supersized.3.2.4.min.js"></script>
         <script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
         <script type="text/javascript" src="js/jquery.scrollbar.min.js"></script>
+        <script type="text/javascript" src="js/jquery.scrolltext.js"></script>
         <script type="text/javascript" src="js/swfobject.js"></script>
         <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
 
@@ -34,6 +35,7 @@
                   $(this).jPlayer("setMedia", {
                     mp3: "sounds/finally_moving.mp3" // Defines the mp3 url
                   }).jPlayer("play"); // Attempts to Auto-Play the media
+                 
                 },
                 ended: function() { // The $.jPlayer.event.ended event
                     $(this).jPlayer("play"); // Repeat the media
@@ -143,7 +145,7 @@
                 params.allownetworking = "all";
                 var attributes = {};
                 attributes.align = "middle";
-                swfobject.embedSWF("swf/intro.swf", "base", "800px", "600px", "9.0.0", false, flashvars, params, attributes); 
+                swfobject.embedSWF("swf/reinova_flash.swf", "base", "800px", "600px", "9.0.0", false, flashvars, params, attributes); 
             }
                 
             function show(){
@@ -179,6 +181,7 @@
         </div>
         
         <div id="soundDiv">
+            
             <div id="jpId"></div>
             <div id="playPause"><a href="javascript:pause();"><img src="/img/unmute.png" /></a></div>
         </div>
